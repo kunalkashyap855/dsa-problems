@@ -24,4 +24,5 @@ int findKthLargest(vector<int>& nums, int k) {
     
     We can improve this time complexity by using Priority Queue as done here.
     Time Complexity = O(n + klogn)
+    Note that this only gives a difference when k << n. Because if k ~= n => O(n + klogn) ~= O(nlogn).
 */
