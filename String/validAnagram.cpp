@@ -13,3 +13,5 @@ bool isAnagram(string s, string t) {
 
     return (s == t);
 }
+
+// Time Complexity = O(nlogn)
