@@ -24,4 +24,7 @@ vector<vector<string>> groupAnagrams(vector<string>& strs) {
     return ans;
 }
 
-// Time Complexity = O(nklogk) <= klogk is because of sorting the longest string of length k and n is because of for loop.
+/* 
+    We create a HashMap in which the key is the sorted string and value is an array actual strings that correspong to that sorted string (they are anagrams).
+    Time Complexity = O(nklogk) <= klogk is because of sorting the longest string of length k and n is because of for loop.
+*/
