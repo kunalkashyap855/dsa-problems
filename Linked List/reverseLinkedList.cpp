@@ -6,6 +6,7 @@
       Output: [5,4,3,2,1]
 */
 
+// 3-pointer solution
 ListNode* reverseList(ListNode* head) {
     if(head == NULL || head->next == NULL)
         return head;
@@ -21,6 +22,7 @@ ListNode* reverseList(ListNode* head) {
         n = n->next;
     }
 
+    //Joininh the last node in the original array to the second last node
     curr->next = prev;
 
     return curr;
