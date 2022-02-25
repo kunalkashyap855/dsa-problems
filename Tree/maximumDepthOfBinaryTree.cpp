@@ -10,15 +10,11 @@
 int maxDepth(TreeNode* root) {
     if(root == NULL)
         return 0;
-
-    int depth = 1;
-
+    
     int left = maxDepth(root->left);
     int right = maxDepth(root->right);
 
-    depth += max(left, right);
-
-    return depth;
+    return 1 + max(left, right);
 }
 
 // Time Complexity = O(h) <= 'h' is the height of the tree
