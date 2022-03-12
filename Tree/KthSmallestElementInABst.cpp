@@ -15,6 +15,7 @@ void inorderTraversal(vector<int> &inorder, TreeNode* root) {
     inorderTraversal(inorder, root->right);
 }
 
+// We utilise the fact that inorder traversal of a BST return a sorted array
 int kthSmallest(TreeNode* root, int k) {
     vector<int> inorder;
 
