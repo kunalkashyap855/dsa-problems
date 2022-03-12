@@ -10,17 +10,11 @@
 */
 
 TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-    TreeNode* LCA = NULL;
+    if(p->val > root->val && q->val > root->val && root->right != NULL)
+        return lowestCommonAncestor(root->right, p, q);
 
-    if(p->val > root->val && q->val > root->val && root->right != NULL) {
-        LCA = root->right;
-        return lowestCommonAncestor(LCA, p, q);
-    }
-
-    if(p->val < root->val && q->val < root->val && root->left != NULL) {
-        LCA = root->left;
-        return lowestCommonAncestor(LCA, p, q);
-    }
+    if(p->val < root->val && q->val < root->val && root->left != NULL)
+        return lowestCommonAncestor(root->left, p, q);
 
     return root;
 }
