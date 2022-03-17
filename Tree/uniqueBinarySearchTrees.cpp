@@ -6,6 +6,7 @@
       Output: 5
 */
 
+// DP Approach
 int numTrees(int n) {
     int dp[n+1];
 
