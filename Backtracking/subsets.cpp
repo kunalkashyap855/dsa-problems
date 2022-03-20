@@ -13,9 +13,11 @@ void bt(vector<int>& nums, vector<vector<int> >& ans, vector<int>& subset, int i
         return;
     }
 
+    // selecting nums[i] in subset
     subset.push_back(nums[i]);
     bt(nums, ans, subset, i+1);
 
+    // not selecting nums[i] in subset
     subset.pop_back();
     bt(nums, ans, subset, i+1);
 
