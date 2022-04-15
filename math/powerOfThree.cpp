@@ -16,4 +16,6 @@ bool isPowerOfThree(int n) {
     return (n > 0 && 1162261467 % n == 0);
 }
 
-// Time Complexity = O(1)
+// Time Complexity = O(1); Here, we just need to check that the given input id greater than 0
+// and if it is a power of 3, the greatest power of 3 which can come in the range of integer
+// is 3^19 = 1162261467, so this number should be divisible by n
