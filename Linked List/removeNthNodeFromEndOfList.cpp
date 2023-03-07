@@ -27,3 +27,32 @@ ListNode* removeNthFromEnd(ListNode* head, int n) {
 }
 
 // Time Complexity = O(n) and we solve the problem in just one pass of the Linked List
+
+
+// ALTERNATE SOLUTION - Also O(n)
+
+ListNode* removeNthFromEnd(ListNode* head, int n) {
+    ListNode* curr = head;
+    int count = 0;
+
+    while(curr) {
+        curr = curr->next;
+        count++;
+    }
+
+    int nodePos = count - n + 1;
+
+    curr = head;
+    ListNode* prev = NULL;
+    for(int i = 1; i < nodePos; i++) {
+        prev = curr;
+        curr = curr->next;
+    }
+
+    if(curr != NULL && prev != NULL)
+        prev->next = curr->next;
+    else if(prev == NULL)
+        return head->next;
+
+    return head;
+}
