@@ -10,6 +10,16 @@
       Output: [1,null,2,null,3,null,4,null,5,null,6]
 """
 
+"""
+    Simple Algorithm
+    - Save right node in a temporary variable
+    - Bring left node to right
+    - flatten this new right node (recursion)
+    - find the last node on right using dfs
+    - flatten original right node saved in temporary variable
+    - on the right of the last node, attach the flattened original right saved in temporary variable
+"""
+
 class Solution:
     def dfs(self, root: Optional[TreeNode]) -> TreeNode:
         if root.left == None and root.right == None:
