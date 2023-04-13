@@ -32,4 +32,4 @@ def numDifferentIntegers(self, word: str) -> int:
 
   return len(set(only_nums))
 
-// Time Complexity = O(n)
+# Time Complexity = O(n)
